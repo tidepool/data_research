@@ -1,19 +1,20 @@
 import psycopg2
 import psycopg2.extras
+import pandas as pd
+import numpy as np
+import pandas.io.sql as pd_sql
+
 import csv
 import re
 import json
 import math
 import datetime
-
-import pandas as pd
-import numpy as np
-import scipy.stats as stats
-import statsmodels.api as sm
-import matplotlib.pyplot as plt
-# import mdp
-import pandas.io.sql as pd_sql
 import sys
+
+# import scipy.stats as stats
+# import statsmodels.api as sm
+# import matplotlib.pyplot as plt
+# import mdp
 
 np.set_printoptions(linewidth = 400)
 pd.set_option('line_width', 400)
