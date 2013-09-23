@@ -13,6 +13,7 @@ import statsmodels.api as sm
 import matplotlib.pyplot as plt
 # import mdp
 import pandas.io.sql as pd_sql
+import sys
 
 np.set_printoptions(linewidth = 400)
 pd.set_option('line_width', 400)
@@ -2216,5 +2217,8 @@ def data_db_work(pandas_df):
 
 
 
-db_games_by_user = pull_data_site(date_to_pull = '2013-09-22', output_file_name = 'output_092313', mturk_batch_name = 'none')
+# db_games_by_user = pull_data_site(date_to_pull = '2013-09-22', output_file_name = 'output_092313', mturk_batch_name = 'none')
+pull_data_site(date_to_pull = sys.argv[1], output_file_name = sys.argv[2], mturk_batch_name = 'none')
+
+
 
