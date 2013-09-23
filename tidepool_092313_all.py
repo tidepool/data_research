@@ -96,7 +96,6 @@ def read_db_hstore_direct(db_string, ids_to_find, db_name, db_field, db_name_col
   return db_flat
 
 
-
 ####
 def read_users_db(dbname_read, series_ids):
   dbname_read2 = 'dbname=%s' % dbname_read
@@ -211,7 +210,6 @@ def read_users_db_date_all(dbname_read, date, guest = False):
 
   return assmt_ids
 
-
 def read_db(dbname_read, ids_to_find, db_name, db_field, db_name_columns):
   dbname_read2 = 'dbname=%s' % dbname_read
   dbconn = psycopg2.connect(dbname_read2)
@@ -253,6 +251,7 @@ def read_db_hstore(dbname_read, ids_to_find, db_name, db_field, db_name_columns)
 
   return db_flat
 ####
+
 
 def parse_scores_db(_results):
   results = pd.DataFrame(_results, columns=['id', 'game_id', 'score hstore', 'calculations', 'user_id', 'time_played', 'type']).rename(columns={'id': 'results_id'})
